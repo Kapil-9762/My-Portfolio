@@ -1,0 +1,14 @@
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    /* align-items: center; */
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+@media (max-width:486px) {
+    .projects{
+        gap: 20px;
+    }
+}

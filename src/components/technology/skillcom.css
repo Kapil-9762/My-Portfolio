@@ -1,0 +1,32 @@
+.skill{
+    /* background: red; */
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    padding: 8px 17px;
+    border-radius: 25px;
+    border: 2px solid rgba(53, 53, 53, 0.795);
+    box-shadow: 0 0 10px rgba(75, 0, 136, 0.719);
+    & p{
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 0.9px;
+        font-size: 0.7rem;
+        margin-top: 8px;
+        
+    }
+}
+.icon{
+    font-size: 1.7rem;
+    /* color: rgb(211, 1, 1); */
+}
+
+/* media query */
+@media (max-width:486px) {
+ .icon{
+    font-size: 1.6rem;
+  }
+  .skill{
+    padding: 7px 15px;
+  }
+ }
