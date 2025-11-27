@@ -117,22 +117,22 @@
 /* img animation */
  @keyframes imag-animation{
     0%{
-        box-shadow: 1px 0px 15px  rgb(207, 135, 2);
+        box-shadow: 1px 0px 15px  rgb(4, 86, 192);
         transform: translateY(10px);
     }
     25%{
-        box-shadow: 1px 0px 15px  rgb(55, 224, 230);                
+        box-shadow: 1px 0px 15px  rgb(2, 169, 175);                
     }
     50%{
-        box-shadow: 1px 0px 15px  rgb(31, 235, 12);
+        box-shadow: 1px 0px 15px  rgb(149, 0, 179);
         transform: translateY(0);
     }
     75%{
-        box-shadow: 1px 0px 15px  rgb(233, 20, 38);
+        box-shadow: 1px 0px 15px  rgb(121, 0, 202);
     }
     100%{
         transform: translateY(-10px);
-        box-shadow: 1px 0px 15px rgb(207, 135, 2);
+        box-shadow: 1px 0px 15px rgba(176, 207, 2, 0.63);
     }
 }
 
