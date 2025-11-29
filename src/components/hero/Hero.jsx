@@ -4,8 +4,10 @@ import './Hero.css'
 import photo from '../../assets/myphoto.png';
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { fadeUp2, fadeUp3, fadeUp4 } from '../animationVariants/animationVariant';
 const Hero = () => {
-    const texts = ["UI/UX Designer", "Web Developer", "Full Stack Developer"];
+    const texts = ["UI/UX Designer", "Web Developer","MERN Stack Developer","Full Stack Developer"];
     const [val, setVal] = useState(0);
 
     useEffect(() => {
@@ -15,9 +17,10 @@ const Hero = () => {
     return () => clearInterval(interval); // cleanup
   }, [texts]);
   return (
-      <div className="home-section container">
+      <motion.div  initial="hidden"
+      animate="show" className="home-section container">
         <div className="style-box"></div>
-         <div className="home-disc">
+         <motion.div variants={fadeUp4}  transition={{ duration: 0.8 }} className="home-disc">
             <h3>Hi I'm</h3>
             <h1>Kapil Prajapati</h1>
               <h3>I'm a <span className='dynamic-disc'>{texts[val]}</span></h3>
@@ -27,13 +30,13 @@ const Hero = () => {
                 <a href="https://github.com/Kapil-9762" target='_blank'><FaGithubSquare/></a>
             </div>
             <a className='btn' href="#about">About Me</a>
-         </div>
-         <div className="home-img">
+         </motion.div>
+         <motion.div variants={fadeUp3}  transition={{ duration: 0.8 }} className="home-img">
               <Tilt><img src={photo}  alt="photo" /></Tilt>
               <div className="style-box2"></div>
-         </div>
+         </motion.div>
          
-      </div>
+      </motion.div>
   )
 }
 

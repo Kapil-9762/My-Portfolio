@@ -3,6 +3,8 @@ import { Link } from 'react-scroll';
 import Tilt from 'react-parallax-tilt';
 import './Navbar.css'
 import { VscThreeBars } from "react-icons/vsc";
+import { motion } from "framer-motion";
+import { fadeUp2 } from '../animationVariants/animationVariant';
 const Navbar = () => {
   const [navBg, setNavBg] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -30,7 +32,8 @@ const Navbar = () => {
     }
   }
   return (
-    <div className={`navbar ${navBg ? "after-scroll" : ""}`}>
+    <motion.div  initial="hidden"
+      animate="show" variants={fadeUp2}  transition={{ duration: 0.8 }} className={`navbar ${navBg ? "after-scroll" : ""}`}>
       <Tilt scale={1.1}><h1 id="logo"><span>&lt;</span>Kapil <span>/ </span>Prajapati<span>&gt;</span></h1></Tilt>
       <div className='flex menu' style={{position:"relative"}}>
         <nav className="nav-items">
@@ -51,7 +54,7 @@ const Navbar = () => {
         <Link to="contact" smooth={true} offset={-215} duration={500} style={{ color: "white" }} className='btn'>CONTACT</Link>
       </div>
        <button className="humburger" onClick={handleMobileMenu}><VscThreeBars/></button>
-    </div>
+    </motion.div>
   )
 }
 
