@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
 import Title from './components/title/Title';
@@ -8,11 +8,26 @@ import Contact from './components/contact/Contact';
 import { Toaster } from "react-hot-toast";
 import Projects from './components/Projects/Projects';
 import Footer from './components/Footer/Footer';
+import Loader from './components/Loader/Loader';
+// import { div } from 'framer-motion/client';
 const App = () => {
-  const cells = Array.from({ length: 100 });
+  const [loading, setLoading] = useState(true);
+   useEffect(() => {
+    const ready = () => setLoading(false);
+    if (document.readyState === "complete") {
+      ready();
+    } else {
+      window.addEventListener("load", ready);
+    }
+    return () => {
+      window.removeEventListener("load", ready);
+    };
+  }, []);
   return (
     <div>
-      <Toaster/> 
+      {loading ? <Loader/> :
+        <div>
+          <Toaster/> 
       <Navbar />
       <Hero />
       <div>
@@ -26,6 +41,8 @@ const App = () => {
         <Contact/>
       </div>
       <Footer/>
+      </div>
+      }
     </div>
   )
 }

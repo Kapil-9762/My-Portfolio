@@ -106,6 +106,7 @@
     & img{
         width: 300px;
        border-radius: 50%;
+       box-shadow:0 0 10px black;
        animation-name: imag-animation;
        animation-timing-function: linear;
        animation-duration:3s;
@@ -117,28 +118,18 @@
 /* img animation */
  @keyframes imag-animation{
     0%{
-        box-shadow: 1px 0px 15px  rgb(4, 86, 192);
         transform: translateY(10px);
     }
-    25%{
-        box-shadow: 1px 0px 15px  rgb(2, 169, 175);                
-    }
     50%{
-        box-shadow: 1px 0px 15px  rgb(149, 0, 179);
         transform: translateY(0);
-    }
-    75%{
-        box-shadow: 1px 0px 15px  rgb(121, 0, 202);
     }
     100%{
         transform: translateY(-10px);
-        box-shadow: 1px 0px 15px rgba(176, 207, 2, 0.63);
     }
 }
 
 @keyframes disc_content {
     0% { opacity: 0; }
-  /* 50% { opacity: 0; } */
   100% { opacity: 1; }
 }
 
