@@ -26,7 +26,7 @@ const Hero = () => {
               <h3>I'm a <span className='dynamic-disc'>{texts[val]}</span></h3>
             <p>I'm a creative designer based in Uttar Pradesh, and I'm very passiotate and dedicated to my work</p>
             <div className="home-soialLinks">
-                <a href="www.linkedin.com/in/kapil9648" target='_blank'><FaLinkedin/></a>
+                <a href="https://linkedin.com/in/kapil9648" target='_blank'><FaLinkedin/></a>
                 <a href="https://github.com/Kapil-9762" target='_blank'><FaGithubSquare/></a>
             </div>
             <a className='btn' href="#about">About Me</a>
